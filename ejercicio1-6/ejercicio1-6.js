@@ -68,4 +68,10 @@ for(let i = mySampleArray.length; i>=0 ;i--){
 
  //no termine de entener porque en este ejercicio cuando le puse i>0 omitió el primer numero del array,pero lo solucioné con el >=
 
- 
+ //ejercicio 7
+
+ var mySampleArray = [3423,5,4,47889,654,8,867543,23,48,56432,55,23,25,12];
+for(var i = 0; i<mySampleArray.length; i = i + 2)
+{
+console.log(`${mySampleArray[i]};${mySampleArray[i+1]}`);
+}
