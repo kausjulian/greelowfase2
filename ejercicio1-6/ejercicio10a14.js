@@ -28,5 +28,23 @@ for(let i = 0; i<myArray.length;i++){
         console.log("no es divisible por 14");
     }
 }
+//ejercicio 13
 
+let i = 20
+while (i>=0){
+    if(i % 5==0){
+        console.log(`${i}!`);
+    }
+    else{console.log(i);}
+i--
+}
+//ejercicio 14
+var myArray = [43,23,6,87,43,1,4,6,3,67,8,3445,3,7,5435,63,346,3,456,734,6,34];
 
+let maximo = 0
+myArray.forEach(element => {
+    if(element > maximo){
+        maximo=element
+    }
+});
+console.log(maximo);

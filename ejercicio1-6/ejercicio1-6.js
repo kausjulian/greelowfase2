@@ -66,7 +66,7 @@ for(let i = mySampleArray.length; i>=0 ;i--){
      console.log(mySampleArray[i]);
  }
 
- //no termine de entener porque en este ejercicio cuando le puse i>0 omitió el primer numero del array,pero lo solucioné con el >=
+ 
 
  //ejercicio 7
 
