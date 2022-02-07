@@ -1,0 +1,53 @@
+body{
+    background-color: green;
+    
+}
+.carta{
+    background-color: white;
+    width: 240px;
+    height: 350px;
+    margin: auto;
+    border-radius: 10px;
+    margin-top: 125px;
+    box-shadow:  5px 5px 10px rgba(0,0,0,0.3);
+    
+}
+
+.numero{
+    margin-left: 14vh;
+    margin-top: 7vh;
+    font-size: 14vh;
+    /* display: flex; */
+    /* justify-content: center;
+    align-items: center; */
+}
+.negras1{
+    color:black;
+    font-size: 8vh;
+    margin-left: 0.5vh;
+    /* display: flex;
+    justify-content:flex-start ;
+    align-items: flex-start; */
+}
+.negras2{
+    color:black;
+    font-size: 8vh;
+    margin-left: 28vh;
+    margin-top: 10vh;
+    /* display: flex;
+    justify-content: flex-end;
+    align-items: flex-end; */
+}
+.rojas1{
+    color:red;
+    font-size: 8vh;
+    margin-left: 1vh;
+}
+.rojas2{
+    
+    color:red;
+    font-size: 8vh;
+    margin-left: 28vh;
+    margin-top: 10vh;
+}
+
