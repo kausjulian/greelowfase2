@@ -10,44 +10,63 @@ body{
     border-radius: 10px;
     margin-top: 125px;
     box-shadow:  5px 5px 10px rgba(0,0,0,0.3);
+    /* display:flex;
+    flex-direction:column;
+    justify-content: space-around; */
+    border: 1px solid;
     
 }
 
 .numero{
-    margin-left: 14vh;
-    margin-top: 7vh;
-    font-size: 14vh;
-    /* display: flex; */
-    /* justify-content: center;
-    align-items: center; */
+    padding-left: 85px;
+    padding-top: 45px;
+    font-size: 100px;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    margin-bottom: 75px;
+    /* border: 1px solid; */
 }
 .negras1{
     color:black;
-    font-size: 8vh;
+    font-size: 50px;
     margin-left: 0.5vh;
-    /* display: flex;
-    justify-content:flex-start ;
-    align-items: flex-start; */
+    justify-content: flex-start;
+    align-items: flex-start;
+    /* border: 1px solid; */
 }
 .negras2{
     color:black;
-    font-size: 8vh;
-    margin-left: 28vh;
-    margin-top: 10vh;
-    /* display: flex;
+    font-size: 50px;
+    margin-top: 100px;
+    margin: auto;
+    display: flex;
+    align-items: flex-end;
     justify-content: flex-end;
-    align-items: flex-end; */
+    /* border: 1px solid; */
 }
 .rojas1{
     color:red;
-    font-size: 8vh;
-    margin-left: 1vh;
+    font-size: 50px;
+    margin-left: 0.5vh;
+    justify-content: flex-start;
+    align-items: flex-start;
+    /* border: 1px solid; */
 }
 .rojas2{
-    
     color:red;
-    font-size: 8vh;
-    margin-left: 28vh;
-    margin-top: 10vh;
+    font-size: 50px;
+    margin-top: 100px;
+    margin: auto;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    /* border: 1px solid; */
 }
-
+.boton{
+    display: flex;
+    width: 100px;
+    height: 50px;
+    margin:auto;
+    font-size: large;
+}
