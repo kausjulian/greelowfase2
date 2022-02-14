@@ -158,20 +158,3 @@ boton.addEventListener('click',butonpress)
  
 console.log(count);
 
-// if(palo==1){
-//   divBlUp.textContent = `♣`
-//   divBlDn.textContent = `♣`
-// }
-// else if (palo==2){
-//   divBlUp.textContent = `♠`
-//   divBlDn.textContent = `♠`
-
-// }
-// else if(palo==3){
-//   divRedUp.textContent = `♦`
-//   divRedDown.textContent = `♦`
-// }
-// else{
-//   divRedUp.textContent = `♥`
-//   divRedDown.textContent = `♥`
-// }

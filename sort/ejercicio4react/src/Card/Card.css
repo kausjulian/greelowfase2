@@ -1,0 +1,22 @@
+.carta{
+   width: 275px;
+   height: 400px;
+   border-radius: 15px!important;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   margin: auto;
+
+   
+}
+.numero{
+    font-size: 70px;
+}
+
+
+.negras1{
+    font-size: 50px;
+}
+.negras2{
+    font-size: 50px;
+}
