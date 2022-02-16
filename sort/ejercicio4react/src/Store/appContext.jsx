@@ -15,8 +15,8 @@ const CardsProvider = ({children}) => {
    const [palo,setPalo] = useState('')
    const[numero,setNumero] = useState(0)
    //array de cartas
-//    const[cartas, setCartas] = useState([])
-let cartas = []
+   const[cartas, setCartas] = useState([])
+// let cartas = []
   
 //tomamos el valor ingresado en el input
 const sendform = (e) =>{
@@ -30,8 +30,8 @@ const sendform = (e) =>{
         setNumero(numeros[numrandom])
         // console.log(palo)
         // console.log(numero)
-        // setCartas([...cartas,{num:numeros[numrandom],pal:palos[palrandom]}])
-        cartas.push(`${i}`)
+        setCartas([...cartas,{num:numeros[numrandom],pal:palos[palrandom]}])
+        // cartas.push(`${i}`)
         console.log(i)
         
     }

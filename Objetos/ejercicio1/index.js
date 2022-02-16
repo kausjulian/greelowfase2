@@ -31,3 +31,16 @@ function Persona(Name,LastName,BirthDate){
     this.BirthDate = BirthDate
 }
 //ejercicio 5
+class Printer{
+    constructor(name){
+        this.name = name
+    }
+   static printerTest(){
+        return 'Hello world'
+    }
+}
+
+let myPrinter = new Printer('Epson')
+
+let testResult = Printer.printerTest()
+console.log(testResult)
