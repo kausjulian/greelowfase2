@@ -12,14 +12,13 @@ const Tablero = () => {
         
             <h1 className='text-center mt-3'>Poker Game</h1>
                 <div className="d-flex">
-                    <form onSubmit={sendform}  className="form-floating mt-3 input">
+                    <form onSubmit={sendform} className="form-floating mt-3 input">
                         <div className="form-floating mb-3">
-                            <input type="number" onChange={(e)=>setUserInput(e.target.value)} className="form-control " id="floatingInput" placeholder=""/>
+                            <input type="number" value={userinput} onChange={(e)=>setUserInput(e.target.value)} className="form-control " id="floatingInput" placeholder=""/>
                             <label for="floatingInput" className='form-label'>Repartir cartas</label>
-                            
+                            <button type="submit" className="btn btn-light boton" >Repartir</button>
                         </div>
                     </form>
-                    <button type="submit" className="btn btn-light boton" >Repartir</button>
                
                 </div> 
         
