@@ -5,7 +5,7 @@ export const CardsContext = createContext(null)
 const CardsProvider = ({children}) => {
    //lista base de palos-numeros
     const palos = ['♣','♠','♥','♦']
-   const numeros = ['1','2','3','4','5','6','7','8','9','10','J','Q','K']
+   const numeros = ['2','3','4','5','6','7','8','9','10','J','Q','K','A']
    //valor ingresado por el usuyario
    const [userinput,setUserInput] = useState(0)
    //numeros aleatorios generados en la funcion repartir
