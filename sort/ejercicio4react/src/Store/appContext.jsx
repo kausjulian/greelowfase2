@@ -17,27 +17,54 @@ const CardsProvider = ({children}) => {
    //array de cartas
    const[cartas, setCartas] = useState([])
 // let cartas = []
-  
+
+//funcion recursiva para crear las cartas
+const cardCreation =(n)=>{
+    if(n==0) return
+     //eligo un valor aleatorio del array
+     setNumRandom(Math.floor(Math.random() * numeros.length))
+     setPalRandom(Math.floor(Math.random() * palos.length))
+     setPalo(palos[palrandom])
+     setNumero(numeros[numrandom])
+     // console.log(palo)
+     // console.log(numero)
+     setCartas([...cartas,{num:numeros[numrandom],pal:palos[palrandom]}])
+     console.log(n)
+     return cardCreation(n-1)
+     
+}  
+
+
+
 //tomamos el valor ingresado en el input
 const sendform = (e) =>{
     e.preventDefault();
     console.log(userinput);
-    for (let i = 0; i < userinput; i++) {
-        //eligo un valor aleatorio del array
-        setNumRandom(Math.floor(Math.random() * numeros.length))
-        setPalRandom(Math.floor(Math.random() * palos.length))
-        setPalo(palos[palrandom])
-        setNumero(numeros[numrandom])
-        // console.log(palo)
-        // console.log(numero)
-        setCartas([...cartas,{num:numeros[numrandom],pal:palos[palrandom]}])
-        // cartas.push(`${i}`)
-        console.log(i)
+    cardCreation(userinput)
+    // for (let i = 0; i < userinput; i++) {
+    //     //eligo un valor aleatorio del array
+    //     setNumRandom(Math.floor(Math.random() * numeros.length))
+    //     setPalRandom(Math.floor(Math.random() * palos.length))
+    //     setPalo(palos[palrandom])
+    //     setNumero(numeros[numrandom])
+    //     // console.log(palo)
+    //     // console.log(numero)
+    //     setCartas([...cartas,{num:numeros[numrandom],pal:palos[palrandom]}])
+    //     // cartas.push(`${i}`)
+    //     console.log(i)
         
-    }
-
+    // }
 }
 console.log(cartas)
+
+// //ejercicio1
+// const backCount = (n)=>{
+//     if (n==0) return
+//     //tambien se puede poner  if (n<0) return
+//     console.log(n)
+//     return backCount(n-1)
+//     }
+//     console.log(backCount(5))
 
 
 
