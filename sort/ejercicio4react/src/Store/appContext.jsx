@@ -55,7 +55,7 @@ const sendform = (e) =>{
         
     }
     setCartas(cartasAux)
-    // setUserInput("")
+    setUserInput("")
 }
 console.log(cartas)
 console.log(orderCards)

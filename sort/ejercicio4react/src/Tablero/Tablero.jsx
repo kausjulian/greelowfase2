@@ -18,20 +18,17 @@ const borrar = ()=>{
     
 // });
 // console.log(numbers)
-const ordenar = (arr) =>{
-    for (let j = 0; j<arr.length;j++){
-     for(let i = 0; i<arr.length-1;i++){
-         if(arr[i].num>arr[i+1].num){
-             let temp = arr[i]
-             arr[i] = arr[i+1]
-             arr[i+1] = temp;
+const ordenar = () =>{
+    for (let j = 0; j<cartas.length;j++){
+     for(let i = 0; i<cartas.length-1;i++){
+         if(cartas[i].num>cartas[i+1].num){
+             let temp = cartas[i]
+             cartas[i] = cartas[i+1]
+             cartas[i+1] = temp;
          }
      }
     }
-    setCartas(arr)
-    return arr
-    
-    
+    setCartas(cartas)
 }
 // console.log(ordenar(cartas));
 console.log(cartas)
@@ -40,7 +37,9 @@ console.log(cartas.length)
 
 
 
-
+useEffect(()=> {
+    
+},[cartas])
 
 
    
@@ -57,7 +56,7 @@ console.log(cartas.length)
                             <label for="floatingInput" className='form-label'>Repartir cartas</label>
                             <button type="submit" className="btn btn-warning boton" >Repartir</button>
                             <button type="button" onClick={()=>borrar()} className="btn btn-danger ms-2 boton" >Borrar</button>
-                            <button type="button" onClick={()=>ordenar(cartas)} className="btn btn-primary ms-2 boton" >Sort</button>
+                            <button type="button" onClick={()=>ordenar()} className="btn btn-primary ms-2 boton" >Sort</button>
                         </div>
                     </form>
                 </div> 
