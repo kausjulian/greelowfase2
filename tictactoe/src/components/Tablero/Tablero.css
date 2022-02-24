@@ -1,0 +1,15 @@
+.tablero{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: grey!important;
+    width: 1000px!important;
+    height: 1000px!important;
+}
+.a1,.a2,.a3,.a4,.a5,.a6,.a7,.a8,.a9{
+    width: 30%;
+    height: 30%;
+    background-color: red;
+
+}

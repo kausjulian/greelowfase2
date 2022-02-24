@@ -1,11 +1,14 @@
 import logo from './logo.svg';
 import './App.css';
+import Tablero from './components/Tablero/Tablero';
 
 function App() {
   return (
-    <>
-    <h1>Hello world</h1>
-    </>
+    <div className='container-fluid App'>
+      skjsdfkjsdf
+   <Tablero/>
+    
+    </div>
   );
 }
 
