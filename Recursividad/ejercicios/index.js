@@ -23,3 +23,14 @@ const simetric = (string)=>{
 console.log(simetric('motor'))
 console.log(simetric('rotor'))
 console.log(simetric('menem'))
+
+///sin necesidad de usar recursividad encontre un codigo muy simple para chequear simetria:
+
+function palindromeChecker(str) {
+    const strReversed = str.split("").reverse().join("");
+  
+    return strReversed === str ? "es palindromo" : "no es palindromo";
+  }
+  console.log(palindromeChecker("oso")); // es palindromo
+  console.log(palindromeChecker("hola")); // no es palindromo
+  console.log(palindromeChecker("omo")); // es palindromo

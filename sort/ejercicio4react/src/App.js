@@ -9,7 +9,7 @@ function App() {
     <div className=''>
     <CardsProvider>
     <Tablero/>
-    <Card/>
+    {/* <Card/> */}
     </CardsProvider>
     </div>
     

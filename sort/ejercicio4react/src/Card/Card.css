@@ -1,7 +1,7 @@
 .carta{
-   width: 275px;
-   height: 400px;
-   border-radius: 15px!important;
+   width: 100px;
+   height: 160px;
+   border-radius: 8px!important;
    display: flex;
    flex-direction: column;
    justify-content: space-between;
@@ -10,13 +10,14 @@
    
 }
 .numero{
-    font-size: 70px;
+    font-size: 6vh;
 }
 
+.negras{
+    font-size: 4vh;
+}
+.rojas{
+    font-size: 4vh;
+    color: red;
+}
 
-.negras1{
-    font-size: 50px;
-}
-.negras2{
-    font-size: 50px;
-}

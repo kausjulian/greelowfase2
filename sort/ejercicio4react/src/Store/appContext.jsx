@@ -5,12 +5,12 @@ export const CardsContext = createContext(null)
 const CardsProvider = ({children}) => {
    //lista base de palos-numeros
     const palos = ['♣','♠','♥','♦']
-   const numeros = ['2','3','4','5','6','7','8','9','10','J','Q','K','A']
+   const numeros = [1,2,3,4,5,6,7,8,9,10,11,12,13,14]
    //valor ingresado por el usuyario
    const [userinput,setUserInput] = useState(0)
    //numeros aleatorios generados en la funcion repartir
-   const [palrandom, setPalRandom] = useState(0)
-   const [numrandom, setNumRandom] = useState(0)
+//    const [palrandom, setPalRandom] = useState(0)
+//    const [numrandom, setNumRandom] = useState(0)
    //estados de palo-numero que se le asignan a las cartas
    const [palo,setPalo] = useState('')
    const[numero,setNumero] = useState(0)
@@ -22,54 +22,50 @@ const CardsProvider = ({children}) => {
 const cardCreation =(n)=>{
     if(n==0) return
      //eligo un valor aleatorio del array
-     setNumRandom(Math.floor(Math.random() * numeros.length))
-     setPalRandom(Math.floor(Math.random() * palos.length))
+    let numrandom = Math.floor(Math.random() * numeros.length)
+    let palrandom = Math.floor(Math.random() * palos.length)
      setPalo(palos[palrandom])
      setNumero(numeros[numrandom])
-     // console.log(palo)
-     // console.log(numero)
      setCartas([...cartas,{num:numeros[numrandom],pal:palos[palrandom]}])
      console.log(n)
      return cardCreation(n-1)
      
 }  
 
-
-
+//array de cartas para ordenarlas
+let orderCards = []
 //tomamos el valor ingresado en el input
 const sendform = (e) =>{
     e.preventDefault();
     console.log(userinput);
-    cardCreation(userinput)
-    // for (let i = 0; i < userinput; i++) {
-    //     //eligo un valor aleatorio del array
-    //     setNumRandom(Math.floor(Math.random() * numeros.length))
-    //     setPalRandom(Math.floor(Math.random() * palos.length))
-    //     setPalo(palos[palrandom])
-    //     setNumero(numeros[numrandom])
-    //     // console.log(palo)
-    //     // console.log(numero)
-    //     setCartas([...cartas,{num:numeros[numrandom],pal:palos[palrandom]}])
-    //     // cartas.push(`${i}`)
-    //     console.log(i)
+    let cartasAux = []
+    // cardCreation(userinput)   para hacerlo con funcion recursiva en vez de for
+    for (let i = 0; i < userinput; i++) {
+        //eligo un valor aleatorio del array
+        let numrandom = Math.floor(Math.random() * numeros.length)
+        let palrandom = Math.floor(Math.random() * palos.length)
+        setPalo(palos[palrandom])
+        setNumero(numeros[numrandom])
+        // console.log(palo)
+        // console.log(numero)
+        cartasAux.push({num:numeros[numrandom],pal:palos[palrandom]})
+        // cartas.push(`${i}`)
+        console.log(i)
+        orderCards.push({num:numeros[numrandom],pal:palos[palrandom]})
         
-    // }
+    }
+    setCartas(cartasAux)
+    // setUserInput("")
 }
 console.log(cartas)
-
-// //ejercicio1
-// const backCount = (n)=>{
-//     if (n==0) return
-//     //tambien se puede poner  if (n<0) return
-//     console.log(n)
-//     return backCount(n-1)
-//     }
-//     console.log(backCount(5))
+console.log(orderCards)
 
 
 
- return ( 
-        <CardsContext.Provider value={{palrandom,numrandom,userinput,setUserInput,sendform,palo,setPalo,numero,setNumero}}>
+
+
+return ( 
+        <CardsContext.Provider value={{userinput,setUserInput,sendform,palo,setPalo,numero,setNumero,cartas,setCartas,orderCards}}>
             {children}
         </CardsContext.Provider>
 
