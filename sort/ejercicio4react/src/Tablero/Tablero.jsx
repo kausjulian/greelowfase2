@@ -4,42 +4,19 @@ import { CardsContext } from '../Store/appContext';
 import './Tablero.css'
 
 const Tablero = () => {
-   const {userinput,setUserInput,sendform,cartas,setCartas,cleaninput} = useContext(CardsContext)
+   const {userinput,setUserInput,sendform,cartas,setCartas,ordenar} = useContext(CardsContext)
     
    //borrar cartas
 const borrar = ()=>{
     setCartas([])
 }
-//bubble sort
-// let numbers = []
-// console.log(numbers)
-// cartas.forEach(carta => {
-//     numbers.push(carta.num)
-    
-// });
-// console.log(numbers)
-const ordenar = () =>{
-    for (let j = 0; j<cartas.length;j++){
-     for(let i = 0; i<cartas.length-1;i++){
-         if(cartas[i].num>cartas[i+1].num){
-             let temp = cartas[i]
-             cartas[i] = cartas[i+1]
-             cartas[i+1] = temp;
-         }
-     }
-    }
-    setCartas(cartas)
-}
-// console.log(ordenar(cartas));
-console.log(cartas)
-
-console.log(cartas.length)
 
 
 
-useEffect(()=> {
-    
-},[cartas])
+
+
+
+
 
 
    
@@ -56,7 +33,7 @@ useEffect(()=> {
                             <label for="floatingInput" className='form-label'>Repartir cartas</label>
                             <button type="submit" className="btn btn-warning boton" >Repartir</button>
                             <button type="button" onClick={()=>borrar()} className="btn btn-danger ms-2 boton" >Borrar</button>
-                            <button type="button" onClick={()=>ordenar()} className="btn btn-primary ms-2 boton" >Sort</button>
+                            <button type="button" onClick={()=>ordenar(cartas)} className="btn btn-primary ms-2 boton" >Sort</button>
                         </div>
                     </form>
                 </div> 

@@ -57,15 +57,31 @@ const sendform = (e) =>{
     setCartas(cartasAux)
     setUserInput("")
 }
+///bubblesort
+const ordenar = () =>{
+    let arr = [...cartas]
+    for (let j = 0; j<arr.length;j++){
+     for(let i = 0; i<arr.length-1;i++){
+         if(arr[i].num>arr[i+1].num){
+             let temp = arr[i]
+             arr[i] = arr[i+1]
+             arr[i+1] = temp;
+         }
+     }
+    }
+    setCartas(arr)
+
+    
+    
+}
+
 console.log(cartas)
-console.log(orderCards)
 
-
-
+console.log(cartas.length)
 
 
 return ( 
-        <CardsContext.Provider value={{userinput,setUserInput,sendform,palo,setPalo,numero,setNumero,cartas,setCartas,orderCards}}>
+        <CardsContext.Provider value={{userinput,setUserInput,sendform,palo,setPalo,numero,setNumero,cartas,setCartas,ordenar}}>
             {children}
         </CardsContext.Provider>
 
