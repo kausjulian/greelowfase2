@@ -38,6 +38,7 @@ let orderCards = []
 const sendform = (e) =>{
     e.preventDefault();
     console.log(userinput);
+    if(userinput>52) return alert("El Máximo de cartas es 52")
     let cartasAux = []
     // cardCreation(userinput)   para hacerlo con funcion recursiva en vez de for
     for (let i = 0; i < userinput; i++) {

@@ -14,3 +14,12 @@
     width: 45%!important;
     
 }
+
+.alert{
+    background-color: rgb(235, 85, 85);
+    height:max-content;
+    
+    width: 20%!important;
+    opacity: 80%;
+    color:rgb(8, 0, 0);
+}
