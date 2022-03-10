@@ -15,14 +15,14 @@ const Players = () => {
                      <div className='col-6'>
                      {/* <form onSubmit={sendform} className="form-floating">
                          <div className="form-floating "> */}
-                                <input type="text" className="form-control form-control-lg" value={player1} onChange={(e)=>setPlayer1(e.target.value)} placeholder='Jugador 1' aria-label=".form-control-lg example"/>
+                                <input type="text" className="form-control form-control-lg" value={player1} onChange={(e)=>setPlayer1(e.target.value)} placeholder='Player 1' aria-label=".form-control-lg example"/>
                                     <button type="submit" onClick={()=>setTurn('X')} className="btn btn-light">X</button>
                         {/* </div>
                     </form> */}
                     </div>
                     {/* player2 box */}
                         <div className='col-6'>
-                            <input class="form-control form-control-lg" value={player2} onChange={(e)=>setPlayer2(e.target.value)} type="text" placeholder='Jugador 2' aria-label=".form-control-lg example"/>
+                            <input class="form-control form-control-lg" value={player2} onChange={(e)=>setPlayer2(e.target.value)} type="text" placeholder='Player 2' aria-label=".form-control-lg example"/>
                             <button type="submit" onClick={()=>setTurn('O')} class="btn btn-light">0</button>
 
                     </div>

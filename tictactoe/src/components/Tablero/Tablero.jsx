@@ -1,14 +1,14 @@
 import { Alert } from 'bootstrap'
-import { useContext, useState } from 'react'
+import { useContext, useEffect, useState } from 'react'
 import { GameContext } from '../../Store/appContext'
 import './Tablero.css'
 
 const Tablero = () => {
-    const {turn,setTurn} = useContext(GameContext)
+    const {turn,setTurn,player1,player2} = useContext(GameContext)
     const [cells,setCells] = useState(Array(9).fill(''));
-    const positions = [1,2,3,4,5,6,7,8,9]
     const [winner, setWinner] = useState('')
-
+    const [ganador, setGanador] = useState('')
+    const positions = [1,2,3,4,5,6,7,8,9]
 
     const defineWinner = (squares) =>{
         let win = [
@@ -39,12 +39,10 @@ const Tablero = () => {
         })
     }
     
-    console.log(winner)
-  
-     // 
+    //funcion para detectar el click en cada casillero
      const handleCLick = (pos) => {
         //prevengo que se modifique un casillero que ya esta lleno
-        if (cells[pos]!==''){
+        if (cells[pos]=='X' || cells[pos]=='O' ){
             alert('Casillero lleno!');
             return 
         }
@@ -67,34 +65,41 @@ const Tablero = () => {
         defineWinner(squares)
      }
         console.log(cells)
-     
-     //creo un componente cuadrado para mapear
+
+    //creo un componente cuadrado para mapear
     const Square = ({pos}) => {
         return (
-          <div className="a1 col-4 text-light" onClick={()=>handleCLick(pos)}>
+          <div className="a1 col-4 text-light d-flex justify-content-center align-items-center" onClick={()=>handleCLick(pos)}>
             {cells[pos]}
               
           </div>
         )
       }
+
+     //funcion para setear el nombre del ganador
+    useEffect(() => {
+        if(winner =='X'){
+            setGanador(`${player1}`)
+        }
+        else if (winner =='O'){
+            setGanador(`${player2}`)
+        }
+    }, [winner]);
     
 
 
-
-
+    
     return ( 
         
     <div className="container-fluid  row tablero justify-content-evenly align-items-center">
-        <h2 className='text-light text-center'>Turno: {turn}</h2>
-       
+        <h2 className={ winner == ''? 'text-light text-center': 'd-none'}>Turn: {turn}</h2>
+        <h2 className={ winner !== ''? 'text-light text-center': 'd-none'}>The winner is {ganador}!</h2>
      {positions.map((position)=>(
          <Square key={position} pos={position}/>
     
     ))
 
      }
-
-
     </div>
 
         );

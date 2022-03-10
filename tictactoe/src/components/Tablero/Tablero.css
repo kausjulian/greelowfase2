@@ -3,11 +3,13 @@
     width: 100%!important;
     height: 100vh!important;
 }
-.a1,.a2,.a3,.a4,.a5,.a6,.a7,.a8,.a9{
+.a1{
     width: 30%!important;
     height: 30%!important;
     background-color:black!important;
     border-style: solid;
     border-color: white!important;
+    font-size: 20vh;
+    font-family: monospace;
 
 }
