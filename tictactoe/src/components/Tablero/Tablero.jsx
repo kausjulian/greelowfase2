@@ -44,10 +44,10 @@ const Tablero = () => {
      // 
      const handleCLick = (pos) => {
         //prevengo que se modifique un casillero que ya esta lleno
-        // if (cells[pos]!==''){
-        //     alert('Casillero lleno!');
-        //     return 
-        // }
+        if (cells[pos]!==''){
+            alert('Casillero lleno!');
+            return 
+        }
         //guardo en squares una copia de cells que tiene 9 posiciones vacias
         let squares = [...cells];
         if(turn === 'X') {
