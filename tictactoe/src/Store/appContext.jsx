@@ -6,7 +6,7 @@ const GameProvider = ({children}) => {
     const[player1, setPlayer1] = useState("")
     const[player2, setPlayer2] = useState("")
     const[turn, setTurn] = useState(true)
-    // const[turn2,setTurn2] = useState(false)
+   
 
     // setplayers
     const sendform =(e) =>{

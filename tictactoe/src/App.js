@@ -8,21 +8,21 @@ import Players from './components/Players';
 
 function App() {
   return (
-    <div className='container-fluid'>
+    <div className='container-fluid App'>
     <GameProvider>
+    
     <Router>
       <Routes>
-      {/* <Route path='/tictactoe/' element={<Landpage/>} />
-      <Route path='tictactoe/tablero' element={<Tablero/>}/> */}
-
-      
+          <Route path='/' element={<Landpage/>}/>
+          <Route path='/tictactoe/players' element={<Players/>}/>
+          <Route path='/tictactoe/tablero' element={<Tablero/>}/> 
+          
 
       </Routes>
 
     </Router>
-    <Landpage/>
-    <Players/>
-    <Tablero/>
+    
+    
    
     </GameProvider>
     
